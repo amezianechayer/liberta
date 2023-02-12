@@ -35,7 +35,7 @@ func makeNode(listenAddr string, bootstrapNodes []string) *node.Node {
 }
 
 func makeTransaction() {
-	client, err := grpc.Dial("0.0.0.0:3000", grpc.WithInsecure())
+	client, err := grpc.Dial(":3000", grpc.WithInsecure())
 	if err != nil {
 		log.Fatal(err)
 	}
